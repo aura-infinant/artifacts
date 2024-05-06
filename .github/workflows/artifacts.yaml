@@ -1,0 +1,33 @@
+name: Artifacts
+
+on: push
+
+jobs:
+  job_1:
+    name: Upload artifact 1
+    runs-on: ubuntu-latest
+    steps:
+      - shell: bash
+        run: |
+          expr 3 + 7 > math.txt
+      - name: Upload math result for job 1
+        uses: actions/upload-artifact@v4
+        with:
+          name: upload
+          path: math.txt
+
+
+  job_2:
+    name: Display results
+    needs: job_1
+    runs-on: macOS-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: final
+      - name: Print the final result
+        shell: bash
+        run: |
+          value=`cat math.txt`
+          echo The result is $value
