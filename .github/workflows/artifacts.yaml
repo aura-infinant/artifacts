@@ -22,7 +22,7 @@ jobs:
     steps:
       - shell: bash
         run: |
-          'abc' > english.txt
+          abc > english.txt
       - name: Upload english for job 2
         uses: actions/upload-artifact@v4
         with:
