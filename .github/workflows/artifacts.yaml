@@ -31,6 +31,7 @@ jobs:
 
   job_3:
     name: Update artifact 1
+    needs: job_1
     runs-on: ubuntu-latest
     steps:
       - name: Download artifact
