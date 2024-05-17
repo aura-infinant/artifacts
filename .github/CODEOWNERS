@@ -1,9 +1,9 @@
 # Owners for the entire repository
-* @aura.jagada
+* @aurajagada
 
 # Owners for the /.github directory
-/.github/ @aura.jagada
+/.github/ @aurajagada
 
 # Owners for a specific file
-README.md @aura.jagada
-pull_request_template.md @aura.jagada
+README.md @aurajagada
+pull_request_template.md @aurajagada
